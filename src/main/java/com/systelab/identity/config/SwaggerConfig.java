@@ -26,9 +26,8 @@ public class SwaggerConfig {
                 .apiInfo(metaData());
     }
 
-
     private ApiInfo metaData() {
-        ApiInfo apiInfo = new ApiInfo(
+        return new ApiInfo(
                 "Identity Management for Patients (API)",
                 "Restful API to manage identifiers to be use in the Medical environment.",
                 "V1.0",
@@ -36,6 +35,5 @@ public class SwaggerConfig {
                 new Contact("Alfons Serra", "https://github.com/alfonsserra/", "alfonsoserra@gmail.com"),
                 "Apache License Version 2.0",
                 "https://www.apache.org/licenses/LICENSE-2.0", new ArrayList<>());
-        return apiInfo;
     }
 }

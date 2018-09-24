@@ -1,5 +1,7 @@
 package com.systelab.identity.controller;
 
+import com.systelab.identity.util.InvalidNumberException;
+import com.systelab.identity.util.MedicalRecordNumberValidator;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.MediaType;
@@ -12,10 +14,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/identity/v1", produces = MediaType.APPLICATION_JSON_VALUE)
 public class MedicalRecordNumberController {
 
-
-    @ApiOperation(value = "Check a Medical Record Number", notes = "")
+    @ApiOperation(value = "Check a Medical Record Number")
     @GetMapping("medical-record-number/{number}")
     public ResponseEntity checkRecordNumber(@PathVariable("number") String number) {
-        return ResponseEntity.ok().build();
+        if (MedicalRecordNumberValidator.isValid(number))
+            return ResponseEntity.ok().build();
+        else
+            throw new InvalidNumberException(number);
     }
 }

@@ -33,10 +33,17 @@ public class MedicalRecordNumberTest {
 
     @Test
     @WithMockUser(roles = "USER")
-    public void testValidateMedicalRecordNumber() throws Exception {
-
-        mvc.perform(get("/identity/v1/medical-record-number/{id}", "132323")
+    public void testValidMedicalRecordNumber() throws Exception {
+        mvc.perform(get("/identity/v1/medical-record-number/{id}", "879-89-8989")
                 .header("Authorization", "Bearer 5d1103e-b3e1-4ae9-b606-46c9c1bc915a"))
                 .andExpect(status().is2xxSuccessful());
+    }
+
+    @Test
+    @WithMockUser(roles = "USER")
+    public void testInvalidMedicalRecordNumber() throws Exception {
+        mvc.perform(get("/identity/v1/medical-record-number/{id}", "8---89-8989")
+                .header("Authorization", "Bearer 5d1103e-b3e1-4ae9-b606-46c9c1bc915a"))
+                .andExpect(status().is4xxClientError());
     }
 }
