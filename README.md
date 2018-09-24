@@ -69,3 +69,8 @@ docker run -p 8080:8080 systelab/identity
 The app will be available at http://localhost:8080/swagger-ui.html
 
 
+[git]: https://git-scm.com/
+[sboot]: https://projects.spring.io/spring-boot/
+[maven]: https://maven.apache.org/download.cgi
+[jdk-download]: http://www.oracle.com/technetwork/java/javase/downloads
+[JEE]: http://www.oracle.com/technetwork/java/javaee/tech/index.html
