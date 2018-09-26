@@ -1,5 +1,6 @@
 package com.systelab.identity.util;
 
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -24,5 +25,15 @@ public class MedicalRecordNumberValidator {
         Pattern pattern = Pattern.compile(expression);
         Matcher matcher = pattern.matcher(inputStr);
         return matcher.matches();
+    }
+
+    // Non real algorithm. Just for generate a compliant number
+    public static String generateRandormNumber() {
+        return generateRandormNumber(100,999)+"-"+generateRandormNumber(10,99)+"-"+generateRandormNumber(1000,9999);
+    }
+
+    private static int generateRandormNumber(int min, int max) {
+        Random r = new Random();
+        return r.nextInt((max - min) + 1) + min;
     }
 }

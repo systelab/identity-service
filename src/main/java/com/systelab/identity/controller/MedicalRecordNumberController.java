@@ -22,4 +22,10 @@ public class MedicalRecordNumberController {
         else
             throw new InvalidNumberException(number);
     }
+
+    @ApiOperation(value = "Check a New Medical Record Number")
+    @GetMapping("medical-record-number")
+    public ResponseEntity<String> getRecordNumber() {
+            return ResponseEntity.ok(MedicalRecordNumberValidator.generateRandormNumber());
+    }
 }
