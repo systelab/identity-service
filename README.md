@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/systelab/identity.svg?branch=master)](https://travis-ci.org/systelab/identity)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7ce4e563c45b4d09a975d61bed7d5d50)](https://www.codacy.com/app/alfonsserra/identity?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=systelab/identity&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7ce4e563c45b4d09a975d61bed7d5d50)](https://www.codacy.com/app/systelab/identity?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=systelab/identity&amp;utm_campaign=Badge_Grade)
 [![Known Vulnerabilities](https://snyk.io/test/github/systelab/identity/badge.svg?targetFile=pom.xml)](https://snyk.io/test/github/systelab/identity?targetFile=pom.xml)
 
 #  Microservice `identity`
@@ -44,7 +44,7 @@ java -jar identity-1.0.jar
 
 ## API
 
-You will find the swagger UI at http://localhost:8080/swagger-ui.html
+You will find the swagger UI at http://localhost:9090/swagger-ui.html
 
 ## Docker
 
@@ -63,10 +63,10 @@ docker build -t systelab/identity .
 ### Run the container
 
 ```bash
-docker run -p 8080:8080 systelab/identity
+docker run -p 9090:9090 systelab/identity
 ```
 
-The app will be available at http://localhost:8080/swagger-ui.html
+The app will be available at http://localhost:9090/swagger-ui.html
 
 
 [git]: https://git-scm.com/
