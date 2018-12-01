@@ -4,9 +4,9 @@
 FROM maven:alpine as builder
 
 ## Storing node modules on a separate layer will prevent unnecessary npm installs at each build
-RUN mkdir /identity
+RUN mkdir /identity-service
 
-WORKDIR /identity
+WORKDIR /identity-service
 
 COPY . .
 
@@ -18,7 +18,7 @@ RUN mvn package
 FROM openjdk:8-jre-alpine
 
 
-COPY --from=builder /identity/target/identity-1.0.jar identity.jar
+COPY --from=builder /identity-service/target/identity-service-1.0.jar identity-service.jar
 
 
-CMD ["java","-jar","identity.jar"]
+CMD ["java","-jar","identity-service.jar"]

@@ -1,28 +1,28 @@
-[![Build Status](https://travis-ci.org/systelab/identity.svg?branch=master)](https://travis-ci.org/systelab/identity)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7ce4e563c45b4d09a975d61bed7d5d50)](https://www.codacy.com/app/systelab/identity?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=systelab/identity&amp;utm_campaign=Badge_Grade)
-[![Known Vulnerabilities](https://snyk.io/test/github/systelab/identity/badge.svg?targetFile=pom.xml)](https://snyk.io/test/github/systelab/identity?targetFile=pom.xml)
+[![Build Status](https://travis-ci.org/systelab/identity-service.svg?branch=master)](https://travis-ci.org/systelab/identity-service)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7ce4e563c45b4d09a975d61bed7d5d50)](https://www.codacy.com/app/systelab/identity-service?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=systelab/identity-service&amp;utm_campaign=Badge_Grade)
+[![Known Vulnerabilities](https://snyk.io/test/github/systelab/identity-service/badge.svg?targetFile=pom.xml)](https://snyk.io/test/github/systelab/identity-service?targetFile=pom.xml)
 
-#  Microservice `identity`
+# Identity Service
 
 This project is simple microservice.
 
 ## Getting Started
 
-To get you started you can simply clone the `identity` repository and install the dependencies:
+To get you started you can simply clone the `identity-service` repository and install the dependencies:
 
 ### Prerequisites
 
-You need [git][git] to clone the `identity` repository.
+You need [git][git] to clone the `identity-service` repository.
 
 You will need [Java™ SE Development Kit 8][jdk-download] and [Maven][maven].
 
-### Clone `identity`
+### Clone `identity-service`
 
-Clone the `identity` repository using git:
+Clone the `identity-service` repository using git:
 
 ```bash
-git clone https://github.com/systelab/identity.git
-cd identity
+git clone https://github.com/systelab/identity-service.git
+cd identity-service
 ```
 
 ### Install Dependencies
@@ -39,7 +39,7 @@ To launch the server, simply run with java -jar the generated jar file.
 
 ```bash
 cd target
-java -jar identity-1.0.jar
+java -jar identity-service-1.0.jar
 ```
 
 ## API
@@ -57,13 +57,13 @@ There is another build rule to trigger a new tag and create a 'version-x.y.z' im
 You can always manually create the image with the following command:
 
 ```bash
-docker build -t systelab/identity . 
+docker build -t systelab/identity-service . 
 ```
 
 ### Run the container
 
 ```bash
-docker run -p 9090:9090 systelab/identity
+docker run -p 9090:9090 systelab/identity-service
 ```
 
 The app will be available at http://localhost:9090/swagger-ui.html
