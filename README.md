@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/systelab/identity.svg?branch=master)](https://travis-ci.org/systelab/identity)
+[![Build Status](https://travis-ci.org/systelab/identity-microservice.svg?branch=master)](https://travis-ci.org/systelab/identity-microservice)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7ce4e563c45b4d09a975d61bed7d5d50)](https://www.codacy.com/app/systelab/identity?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=systelab/identity&amp;utm_campaign=Badge_Grade)
 [![Known Vulnerabilities](https://snyk.io/test/github/systelab/identity/badge.svg?targetFile=pom.xml)](https://snyk.io/test/github/systelab/identity?targetFile=pom.xml)
 
